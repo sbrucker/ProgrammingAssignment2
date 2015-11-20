@@ -18,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
   list(set = set, get = get,
        setInv = setInv,
        getInv = getInv)
-}
+  }
 
 ## The following function calculates the mean of the special "vector" created with the above function. 
 ## However, it first checks to see if the mean has already been calculated. If so, it gets the mean from 
@@ -33,7 +33,7 @@ cacheSolve <- function(x, ...) {
     return(m)
   }
   data <- x$get()
-  m <- solve(data, ...)
+  m <- solve(data)
   x$setInv(m)
   m
 }
